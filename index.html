@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ProGallery</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.7);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-camera-retro text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">ProGallery</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white glass-card px-4 py-2 rounded-full transition-all">
+                <i class="fa-solid fa-arrow-left mr-2"></i> गैलरी पर लौटें
+            </a>
+        </div>
+    </header>
+
+    <!-- Main About Us Section -->
+    <main class="max-w-5xl mx-auto px-6 py-12 flex-grow flex items-center">
+        <div class="glass-card rounded-3xl p-8 md:p-12 w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-2xl relative overflow-hidden">
+            
+            <!-- Background Accent Light -->
+            <div class="absolute -top-20 -left-20 w-60 h-60 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-20 -right-20 w-60 h-60 bg-pink-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Profile / Brand Image (4 Columns on Desktop) -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
+                         alt="About Us Photo" 
+                         class="relative w-64 h-80 md:w-full md:h-96 object-cover rounded-2xl shadow-xl">
+                </div>
+            </div>
+
+            <!-- Details Section (7 Columns on Desktop) -->
+            <div class="md:col-span-7 space-y-5">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/80 px-3 py-1 rounded-md border border-indigo-500/30"> About Me / Creator</span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mt-3">
+                        नमस्ते, मैं हूँ <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-500">राहुल शर्मा</span>
+                    </h1>
+                    <p class="text-indigo-300 font-medium text-sm mt-1">Professional Photographer & Visual Artist</p>
+                </div>
+
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    मुझे तस्वीरों के जरिए खूबसूरत लम्हों और कहानियों को कैद करना पसंद है। यह गैलरी गूगल शीट्स और गूगल ड्राइव एपीआई द्वारा संचालित एक लाइव पोर्टफोलियो है, जहाँ मेरी बेहतरीन फोटोग्राफी को आप आसानी से देख सकते हैं।
+                </p>
+
+                <!-- Key Highlights Grid -->
+                <div class="grid grid-cols-2 gap-4 py-2">
+                    <div class="glass-card p-4 rounded-xl border border-white/5">
+                        <i class="fa-solid fa-camera text-indigo-400 text-xl mb-1"></i>
+                        <h4 class="text-lg font-bold text-white">500+</h4>
+                        <p class="text-xs text-gray-400">Photos Captured</p>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-white/5">
+                        <i class="fa-solid fa-award text-pink-400 text-xl mb-1"></i>
+                        <h4 class="text-lg font-bold text-white">5+ Years</h4>
+                        <p class="text-xs text-gray-400">Experience</p>
+                    </div>
+                </div>
+
+                <!-- Social Links & Contact -->
+                <div class="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-indigo-600 transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-indigo-600 transition-all">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-white hover:bg-indigo-600 transition-all">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <a href="mailto:contact@example.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 hover:opacity-90 transition-all">
+                        <i class="fa-solid fa-envelope"></i> संपर्‍क करें
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-xs text-gray-500 border-t border-white/5">
+        &copy; 2026 ProGallery. All rights reserved.
+    </footer>
+
+</body>
+</html>
