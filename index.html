@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport definition for a wide, desktop-style width on mobile -->
+    <meta name="viewport" content="width=1280, initial-scale=0.5">
     <title>About Us - BPS</title>
     <style>
         * {
@@ -16,42 +17,50 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.7;
+            /* Prevents scrolling overflow due to specific width */
+            overflow-x: auto; 
+            width: 1280px; /* Force a consistent wide width */
+            margin: 0 auto;
         }
 
+        /* Banner section without the overlay */
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 380px;
+            height: 380px; /* Match desired height */
             background-color: #eee;
             overflow: hidden;
         }
 
+        /* Full image, no overlay, text on top */
         .hero-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block; /* Ensures no bottom gap */
         }
 
-        /* Diagonal Split Overlay (Right Side Blue Banner) */
-        .hero-overlay {
+        /* Transparent, centered text section over the image */
+        .hero-overlay-text {
             position: absolute;
             top: 0;
-            right: 0;
-            width: 65%;
+            left: 0;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(58, 141, 194, 0.75) 0%, rgba(20, 85, 130, 0.85) 100%);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            background: transparent; /* Remove blue shade completely */
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding-right: 8%;
+            padding-right: 15%; /* Keep text to the right as in original style */
         }
 
-        .hero-overlay h1 {
+        .hero-overlay-text h1 {
             color: #ffffff;
             font-size: 3rem;
             font-weight: 700;
             letter-spacing: 1px;
+            /* Shadow for readability against any image part */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
         }
 
         .content-container {
@@ -79,31 +88,14 @@
             color: #4a4a4a;
             text-align: justify;
         }
-
-        @media (max-width: 768px) {
-            .hero-banner {
-                height: 250px;
-            }
-            .hero-overlay {
-                width: 80%;
-                clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-                padding-right: 5%;
-            }
-            .hero-overlay h1 {
-                font-size: 2rem;
-            }
-            .content-container {
-                margin: 30px auto;
-            }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header Section: Full width image, no blue shade -->
     <div class="hero-banner">
         <img src="school.jpg" alt="BPS School Campus" class="hero-image">
-        <div class="hero-overlay">
+        <div class="hero-overlay-text">
             <h1>About Us</h1>
         </div>
     </div>
