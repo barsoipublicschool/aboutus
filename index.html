@@ -2,32 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - BPS</title>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
             background-color: #ffffff;
             color: #333;
-            line-height: 1.7;
-            overflow-x: auto; 
-            width: 1280px;
-            margin: 0 auto;
+            line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
         }
 
-        /* Banner Section */
+        /* Banner Section - Responsive */
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 380px;
+            height: 250px; /* Adjust height for mobile */
             background-color: #eee;
             overflow: hidden;
         }
@@ -36,7 +34,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
         .hero-overlay-text {
@@ -45,35 +42,29 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: transparent;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding-right: 15%;
+            justify-content: center; /* Center for better mobile look */
         }
 
         .hero-overlay-text h1 {
             color: #ffffff;
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
         }
 
         /* Content Section */
         .content-container {
-            max-width: 900px;
-            margin: 50px auto 70px auto;
-            padding: 0 20px;
+            width: 95%;
+            margin: 20px auto;
         }
 
         .main-heading {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #2b2b2b;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
+            margin-bottom: 15px;
         }
 
         .main-heading span {
@@ -81,104 +72,60 @@
         }
 
         .content-container p {
-            margin-bottom: 22px;
-            font-size: 1.05rem;
-            color: #4a4a4a;
+            margin-bottom: 15px;
+            font-size: 1rem;
             text-align: justify;
         }
 
-        /* Footer / Contact Section */
+        /* Footer Section */
         .footer-section {
             background-color: #f4f4f4;
-            padding: 50px 0;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .footer-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo-box {
-            margin-bottom: 15px;
+            padding: 30px 15px;
+            margin-top: 30px;
         }
 
         .logo-box img {
-            max-width: 80px;
-            height: auto;
-            display: block;
+            max-width: 60px;
+            margin-bottom: 10px;
         }
 
         .school-title {
-            font-size: 1.3rem;
             font-weight: bold;
-            color: #222;
+            font-size: 1.1rem;
             margin-bottom: 10px;
         }
 
         .contact-info {
-            font-size: 1rem;
-            color: #444;
-            margin-bottom: 35px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
         .contact-info p {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-bottom: 5px;
         }
 
-        .contact-info i {
-            color: #444;
-            width: 18px;
-        }
-
-        .contact-info a {
-            color: #444;
-            text-decoration: none;
-        }
-
+        /* Map and Links - Stacked on Mobile */
         .footer-grid {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        .map-box {
-            flex: 1;
+            flex-direction: column; /* Stacked vertically on mobile */
+            gap: 20px;
         }
 
         .map-box h3 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
 
         .map-img-container {
             width: 100%;
-            max-width: 380px;
+            height: 180px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            overflow: hidden;
-            background: #fff;
         }
 
         .map-img-container img {
             width: 100%;
-            height: 220px;
+            height: 100%;
             object-fit: cover;
-            display: block;
-        }
-
-        .quick-links {
-            flex: 1;
-            padding-top: 35px;
         }
 
         .quick-links ul {
@@ -186,90 +133,59 @@
         }
 
         .quick-links ul li {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .quick-links ul li a {
             color: #444;
             text-decoration: none;
-            font-size: 1.05rem;
-            transition: color 0.2s;
-        }
-
-        .quick-links ul li a:hover {
-            color: #e38627;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <div class="hero-banner">
-        <!-- Photo URL / Path -->
         <img src="school.jpg" alt="BPS School Campus" class="hero-image">
         <div class="hero-overlay-text">
             <h1>About Us</h1>
         </div>
     </div>
 
-    <!-- About Section -->
     <div class="content-container">
         <h2 class="main-heading">THE <span>SCHOOL</span></h2>
-        
-        <p>BPS is situated near Barsoi Block- Zamhira Road. It was established by Md.Naiyer Alam in 2001 and it is managed by the Pvt. Unaided. It is located in Rural area. It is located in BARSOI block of KATIHAR district of Bihar. It is the largest convent of this area. The school consists of Grades from 1 to 8. The school is Co-educational and it doesn't have an attached pre-primary section. The school is Private in nature and is not using school building as a shift-school. English is the medium of instructions in this school. This school is approachable by all weather road. In this school academic session starts in April.</p>
-
-        <p>The school has Rented building. It has got 8 classrooms for instructional purposes. All the classrooms are in good condition. It has 2 other rooms for non-teaching activities. The school has a separate room for Head master/Teacher. The school has Pucca boundary wall. It has a big playground, where different games are played in evening time. It has a nice magnificent building. The school has electric connection. The source of Drinking Water in the school is Hand Pumps and it is functional. The school has 6 boys toilet and it is functional, and 3 girls toilet and it is functional. The school has a playground. The school has a library and has 1000 books in its library. The school does not need ramp for disabled children to access classrooms. The school has 3 computers for teaching and learning purposes and all are functional. The school is not having a computer aided learning lab. The school is Not providing mid-day meal. At present more than 600 boys and girls read in this school. There are 20 teachers and 6 non-teaching staff in the school. Teachers are qualified. They teach students with love and care.</p>
+        <p>BPS is situated near Barsoi Block- Zamhira Road. It was established by Md.Naiyer Alam in 2001 and it is managed by the Pvt. Unaided. It is located in Rural area. It is located in BARSOI block of KATIHAR district of Bihar. It is the largest convent of this area. The school consists of Grades from 1 to 8.</p>
+        <p>The school has a nice magnificent building. The school has electric connection. The source of Drinking Water in the school is Hand Pumps and it is functional. The school has 6 boys toilet and it is functional, and 3 girls toilet and it is functional. The school has a library and has 1000 books in its library.</p>
     </div>
 
-    <!-- Contact & Footer Section -->
     <footer class="footer-section">
-        <div class="footer-container">
-            
-            <!-- Logo Section -->
-            <div class="logo-box">
-                <!-- 
-                   GOOGLE DRIVE LOGO URL: 
-                   Niche 'logo.png' ki jagah Drive Direct Link/URL paste kar sakte hain 
-                -->
-                <img src="logo.png" alt="BPS Logo">
-            </div>
+        <div class="logo-box">
+            <img src="logo.png" alt="BPS Logo">
+        </div>
+        <div class="school-title">BARSOI PUBLIC SCHOOL</div>
+        <div class="contact-info">
+            <p><strong>Address:</strong> Nehar Nagar, Barsoi</p>
+            <p><strong>Numbers:</strong> 9661663698, 9472923915</p>
+            <p><strong>Email:</strong> barsoipublicschool12t@gmail.com</p>
+        </div>
 
-            <div class="school-title">BARSOI PUBLIC SCHOOL</div>
-
-            <!-- Contact Details -->
-            <div class="contact-info">
-                <p>Address - Nehar Nagar, Barsoi</p>
-                <p><i class="fa-solid fa-phone"></i> +91 9661663698</p>
-                <p><i class="fa-solid fa-phone"></i> +91 9472923915</p>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:barsoipublicschool12t@gmail.com">barsoipublicschool12t@gmail.com</a></p>
-            </div>
-
-            <!-- Map and Quick Links Grid -->
-            <div class="footer-grid">
-                <div class="map-box">
-                    <h3>GOOGLE MAP</h3>
-                    <div class="map-img-container">
-                        <!-- 
-                           GOOGLE DRIVE MAP IMAGE URL:
-                           Niche 'map.jpg' ki jagah Drive Image Direct Link paste karein 
-                        -->
-                        <a href="https://maps.google.com" target="_blank">
-                            <img src="map.jpg" alt="Google Map Location">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="quick-links">
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Almanac</a></li>
-                        <li><a href="#">Archive</a></li>
-                        <li><a href="#">Video Gallery</a></li>
-                        <li><a href="#">Image Gallery</a></li>
-                    </ul>
+        <div class="footer-grid">
+            <div class="map-box">
+                <h3>GOOGLE MAP</h3>
+                <div class="map-img-container">
+                    <a href="https://maps.google.com" target="_blank">
+                        <img src="map.jpg" alt="Google Map Location">
+                    </a>
                 </div>
             </div>
 
+            <div class="quick-links">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Arazul Haque</a></li>
+                    <li><a href="#">Aki Alif</a></li>
+                    <li><a href="#">Sarim Faisal</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
