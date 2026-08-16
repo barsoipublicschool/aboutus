@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport definition for a wide, desktop-style width on mobile -->
     <meta name="viewport" content="width=1280, initial-scale=0.5">
     <title>About Us - BPS</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -14,44 +15,41 @@
         }
 
         body {
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             color: #333;
             line-height: 1.7;
-            /* Prevents scrolling overflow due to specific width */
             overflow-x: auto; 
-            width: 1280px; /* Force a consistent wide width */
+            width: 1280px;
             margin: 0 auto;
         }
 
-        /* Banner section without the overlay */
+        /* Banner Section */
         .hero-banner {
             position: relative;
             width: 100%;
-            height: 380px; /* Match desired height */
+            height: 380px;
             background-color: #eee;
             overflow: hidden;
         }
 
-        /* Full image, no overlay, text on top */
         .hero-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block; /* Ensures no bottom gap */
+            display: block;
         }
 
-        /* Transparent, centered text section over the image */
         .hero-overlay-text {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: transparent; /* Remove blue shade completely */
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding-right: 15%; /* Keep text to the right as in original style */
+            padding-right: 15%;
         }
 
         .hero-overlay-text h1 {
@@ -59,13 +57,13 @@
             font-size: 3rem;
             font-weight: 700;
             letter-spacing: 1px;
-            /* Shadow for readability against any image part */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
+        /* Content Section */
         .content-container {
             max-width: 900px;
-            margin: 50px auto;
+            margin: 50px auto 70px auto;
             padding: 0 20px;
         }
 
@@ -88,19 +86,133 @@
             color: #4a4a4a;
             text-align: justify;
         }
+
+        /* Footer / Contact Section */
+        .footer-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-box {
+            margin-bottom: 15px;
+        }
+
+        .logo-box img {
+            max-width: 80px;
+            height: auto;
+            display: block;
+        }
+
+        .school-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 35px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: #444;
+            width: 18px;
+        }
+
+        .contact-info a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .map-box {
+            flex: 1;
+        }
+
+        .map-box h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .map-img-container {
+            width: 100%;
+            max-width: 380px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .map-img-container img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .quick-links {
+            flex: 1;
+            padding-top: 35px;
+        }
+
+        .quick-links ul {
+            list-style: none;
+        }
+
+        .quick-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .quick-links ul li a {
+            color: #444;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        .quick-links ul li a:hover {
+            color: #e38627;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header Section: Full width image, no blue shade -->
+    <!-- Header Section -->
     <div class="hero-banner">
+        <!-- Photo URL / Path -->
         <img src="school.jpg" alt="BPS School Campus" class="hero-image">
         <div class="hero-overlay-text">
             <h1>About Us</h1>
         </div>
     </div>
 
-    <!-- Details Section -->
+    <!-- About Section -->
     <div class="content-container">
         <h2 class="main-heading">THE <span>SCHOOL</span></h2>
         
@@ -108,6 +220,58 @@
 
         <p>The school has Rented building. It has got 8 classrooms for instructional purposes. All the classrooms are in good condition. It has 2 other rooms for non-teaching activities. The school has a separate room for Head master/Teacher. The school has Pucca boundary wall. It has a big playground, where different games are played in evening time. It has a nice magnificent building. The school has electric connection. The source of Drinking Water in the school is Hand Pumps and it is functional. The school has 6 boys toilet and it is functional, and 3 girls toilet and it is functional. The school has a playground. The school has a library and has 1000 books in its library. The school does not need ramp for disabled children to access classrooms. The school has 3 computers for teaching and learning purposes and all are functional. The school is not having a computer aided learning lab. The school is Not providing mid-day meal. At present more than 600 boys and girls read in this school. There are 20 teachers and 6 non-teaching staff in the school. Teachers are qualified. They teach students with love and care.</p>
     </div>
+
+    <!-- Contact & Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            
+            <!-- Logo Section -->
+            <div class="logo-box">
+                <!-- 
+                   GOOGLE DRIVE LOGO URL: 
+                   Niche 'logo.png' ki jagah Drive Direct Link/URL paste kar sakte hain 
+                -->
+                <img src="logo.png" alt="BPS Logo">
+            </div>
+
+            <div class="school-title">BARSOI PUBLIC SCHOOL</div>
+
+            <!-- Contact Details -->
+            <div class="contact-info">
+                <p>Address - Nehar Nagar, Barsoi</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9661663698</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9472923915</p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:barsoipublicschool12t@gmail.com">barsoipublicschool12t@gmail.com</a></p>
+            </div>
+
+            <!-- Map and Quick Links Grid -->
+            <div class="footer-grid">
+                <div class="map-box">
+                    <h3>GOOGLE MAP</h3>
+                    <div class="map-img-container">
+                        <!-- 
+                           GOOGLE DRIVE MAP IMAGE URL:
+                           Niche 'map.jpg' ki jagah Drive Image Direct Link paste karein 
+                        -->
+                        <a href="https://maps.google.com" target="_blank">
+                            <img src="map.jpg" alt="Google Map Location">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Almanac</a></li>
+                        <li><a href="#">Archive</a></li>
+                        <li><a href="#">Video Gallery</a></li>
+                        <li><a href="#">Image Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 </html>
